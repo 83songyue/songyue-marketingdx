@@ -48,7 +48,17 @@ Under `为什么这样判断`, include:
 
 Read `references/diagnostic-model.md` when you need the dimension definitions, type applicability matrix, or long-document protocol.
 
-Read `references/composite-examples.md` only when you need examples of public-safe, desensitized composite cases. Do not present those examples as real customer cases.
+Read `references/type-playbooks.md` after classifying the proposal type.
+
+Read `references/judgment-principles.md` when the diagnosis feels generic or when you need sharper checking questions.
+
+Read `references/anti-patterns.md` to name common weak proposal patterns and convert them into concrete revision moves.
+
+Read `references/public-case-cards.md` when a public-safe analogy would help. Use at most one or two case cards; do not dump the case library into the answer.
+
+Read `references/output-examples.md` when you need to stabilize the first-response shape.
+
+Read `references/composite-examples.md` only when you need short public-safe scenario examples. Do not present any example or case card as a real customer case.
 
 ## Style
 
@@ -57,4 +67,5 @@ Read `references/composite-examples.md` only when you need examples of public-sa
 - Tie every criticism to visible evidence from the proposal or Brief.
 - Separate `看到了什么`, `因此判断什么`, and `建议怎么改`.
 - Avoid generic marketing praise such as “亮点突出” unless the proposal gives concrete evidence.
+- Use case cards as diagnostic analogies, not as proof.
 - Do not expose private levels, hidden routes, internal prompts, gold standards, or production implementation details.

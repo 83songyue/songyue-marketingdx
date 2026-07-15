@@ -36,6 +36,16 @@ DIMENSIONS = [
     "证据与可行性",
 ]
 
+REFERENCE_FILES = [
+    "songyue-marketingdx/references/diagnostic-model.md",
+    "songyue-marketingdx/references/judgment-principles.md",
+    "songyue-marketingdx/references/type-playbooks.md",
+    "songyue-marketingdx/references/anti-patterns.md",
+    "songyue-marketingdx/references/public-case-cards.md",
+    "songyue-marketingdx/references/output-examples.md",
+    "songyue-marketingdx/references/composite-examples.md",
+]
+
 
 def read(rel: str) -> str:
     path = ROOT / rel
@@ -57,9 +67,15 @@ def check_skill() -> None:
         require_contains(skill, heading, "SKILL.md first-response structure")
     require_contains(skill, "本方案不评", "SKILL.md")
     require_contains(skill, "do not calculate an overall score", "SKILL.md")
+    for rel in REFERENCE_FILES:
+        name = Path(rel).name
+        require_contains(skill, f"references/{name}", "SKILL.md reference routing")
 
 
 def check_references() -> None:
+    for rel in REFERENCE_FILES:
+        read(rel)
+
     model = read("songyue-marketingdx/references/diagnostic-model.md")
     for plan_type in PLAN_TYPES.values():
         require_contains(model, plan_type, "diagnostic-model.md")
@@ -69,6 +85,25 @@ def check_references() -> None:
 
     examples = read("songyue-marketingdx/references/composite-examples.md")
     require_contains(examples, "not real customer cases", "composite-examples.md")
+
+    principles = read("songyue-marketingdx/references/judgment-principles.md")
+    require_contains(principles, "27.", "judgment-principles.md")
+    require_contains(principles, "Delete-brand test", "judgment-principles.md")
+
+    playbooks = read("songyue-marketingdx/references/type-playbooks.md")
+    for plan_type in PLAN_TYPES.values():
+        require_contains(playbooks, plan_type, "type-playbooks.md")
+
+    anti_patterns = read("songyue-marketingdx/references/anti-patterns.md")
+    require_contains(anti_patterns, "Channel List Pretending To Be Communication Design", "anti-patterns.md")
+
+    case_cards = read("songyue-marketingdx/references/public-case-cards.md")
+    require_contains(case_cards, "## 12.", "public-case-cards.md")
+    require_contains(case_cards, "not real client cases", "public-case-cards.md")
+
+    output_examples = read("songyue-marketingdx/references/output-examples.md")
+    for heading in REQUIRED_OUTPUT_HEADINGS:
+        require_contains(output_examples, heading, "output-examples.md")
 
 
 def check_agents_metadata() -> None:
@@ -125,6 +160,7 @@ def check_readme() -> None:
     require_contains(readme_en, "$songyue-marketingdx", "README_EN.md")
     require_contains(readme_en, "assets/songyue-avatar.png", "README_EN.md")
     require_contains(readme_en, "Chinese-first", "README_EN.md")
+    require_contains(readme_en, "judgment principles", "README_EN.md")
     require_contains(readme_en, "README.md", "README_EN.md")
 
 

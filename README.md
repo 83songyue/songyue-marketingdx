@@ -127,7 +127,12 @@ Claude Code、Workbody、Hermes 或其他兼容 Agent Skills 的环境，安装�
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
 │   └── references/
+│       ├── anti-patterns.md
 │       ├── diagnostic-model.md
+│       ├── judgment-principles.md
+│       ├── output-examples.md
+│       ├── public-case-cards.md
+│       ├── type-playbooks.md
 │       └── composite-examples.md
 ├── scripts/
 │   ├── privacy_scan.py
@@ -153,6 +158,8 @@ Claude Code、Workbody、Hermes 或其他兼容 Agent Skills 的环境，安装�
 - 特定艺人、IP、媒体、城市、节点和独有执行组合。
 
 公开案例保留的是可迁移的判断规律，而不是某个客户项目本身。
+
+`references/` 里已经包含公开安全的判断原则、类型打法、常见反模式、脱敏复合案例卡和输出样例。它们是给 Agent 使用的知识资产，不是私有案例原文。
 
 ## 发布前验证
 

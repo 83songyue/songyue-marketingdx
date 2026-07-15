@@ -104,6 +104,8 @@ They remove or abstract:
 
 The public cases preserve reusable judgment patterns, not the original client projects.
 
+The `references/` folder includes the public knowledge layer used by the skill: judgment principles, type playbooks, anti-patterns, desensitized composite case cards, and output examples.
+
 ## Validation
 
 Before publishing, maintainers can run:
