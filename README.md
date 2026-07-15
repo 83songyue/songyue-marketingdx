@@ -1,10 +1,18 @@
 # 宋老师的营销诊断 skills
 
+<p align="center">
+  <img src="assets/songyue-avatar.png" alt="宋玥头像" width="140">
+</p>
+
+[English](README_EN.md)
+
 把一份营销方案丢给 AI，让它别只会“泛泛而谈、没有重点”，而是像一个有经验的品牌策略顾问一样，指出这个方案到底卡在哪里、为什么不够锋利、下一版该怎么改。
 
 `songyue-marketingdx` 是宋玥开放出来的营销方案诊断 Agent Skill。它基于作者 20 年品牌营销和创意策略的实战经验（曾在 Ogilvy、腾讯、天与空等公司工作），长期服务和观察品牌、广告、内容和商业增长项目；同时基于 100+ 4A 级营销案例拆出的判断语料和真实营销诊断产品中积累的诊断框架，整理成一个可以安装到 Codex、Claude Code 等 Agent 环境里的公开 skill。
 
 English summary: `songyue-marketingdx` is a Chinese marketing proposal diagnosis skill based on Songyue's 20 years of brand, creative, and marketing strategy experience. It helps an AI agent critique and improve campaign, PR, brand strategy, and creative/content proposals with practical, evidence-based feedback.
+
+这套判断方法也可以用于英文营销方案。它最擅长的仍然是中文方案和中国市场语境；如果要诊断英文方案，可以明确告诉 Agent 用英文输出。
 
 ## 它能帮你做什么
 
@@ -110,8 +118,11 @@ Claude Code、Workbody、Hermes 或其他兼容 Agent Skills 的环境，安装�
 ```text
 .
 ├── README.md
+├── README_EN.md
 ├── LICENSE
 ├── NOTICE
+├── assets/
+│   └── songyue-avatar.png
 ├── songyue-marketingdx/
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
@@ -121,11 +132,13 @@ Claude Code、Workbody、Hermes 或其他兼容 Agent Skills 的环境，安装�
 ├── scripts/
 │   ├── privacy_scan.py
 │   └── smoke_check.py
-└── tests/smoke_cases/
-    ├── integrated-marketing.md
-    ├── pr-communications.md
-    ├── strategy-brand.md
-    └── creative-content.md
+└── tests/
+    ├── fresh_agent_prompts.md
+    └── smoke_cases/
+        ├── integrated-marketing.md
+        ├── pr-communications.md
+        ├── strategy-brand.md
+        └── creative-content.md
 ```
 
 ## 案例脱敏说明

@@ -110,10 +110,22 @@ def check_fresh_agent_prompts() -> None:
 
 
 def check_readme() -> None:
+    avatar = ROOT / "assets" / "songyue-avatar.png"
+    if not avatar.is_file():
+        raise AssertionError("Missing avatar image: assets/songyue-avatar.png")
+
     readme = read("README.md")
     require_contains(readme, "$songyue-marketingdx", "README.md")
+    require_contains(readme, "assets/songyue-avatar.png", "README.md")
+    require_contains(readme, "README_EN.md", "README.md")
     require_contains(readme, "scripts/privacy_scan.py", "README.md")
     require_contains(readme, "scripts/smoke_check.py", "README.md")
+
+    readme_en = read("README_EN.md")
+    require_contains(readme_en, "$songyue-marketingdx", "README_EN.md")
+    require_contains(readme_en, "assets/songyue-avatar.png", "README_EN.md")
+    require_contains(readme_en, "Chinese-first", "README_EN.md")
+    require_contains(readme_en, "README.md", "README_EN.md")
 
 
 def main() -> int:
