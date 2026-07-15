@@ -91,6 +91,17 @@ def check_smoke_cases() -> None:
             require_contains(text, "本方案不评", filename)
 
 
+def check_fresh_agent_prompts() -> None:
+    prompts = read("tests/fresh_agent_prompts.md")
+    for filename, route in PLAN_TYPES.items():
+        require_contains(prompts, filename, "fresh_agent_prompts.md")
+        require_contains(prompts, route, "fresh_agent_prompts.md")
+    for heading in REQUIRED_OUTPUT_HEADINGS:
+        require_contains(prompts, heading, "fresh_agent_prompts.md")
+    require_contains(prompts, "帮我诊断一下这个营销方案", "fresh_agent_prompts.md")
+    require_contains(prompts, "诊断方案", "fresh_agent_prompts.md")
+
+
 def check_readme() -> None:
     readme = read("README.md")
     require_contains(readme, "$songyue-marketingdx", "README.md")
@@ -103,6 +114,7 @@ def main() -> int:
         check_skill,
         check_references,
         check_smoke_cases,
+        check_fresh_agent_prompts,
         check_readme,
     ]
     try:
