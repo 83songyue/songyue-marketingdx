@@ -71,6 +71,13 @@ def check_references() -> None:
     require_contains(examples, "not real customer cases", "composite-examples.md")
 
 
+def check_agents_metadata() -> None:
+    metadata = read("songyue-marketingdx/agents/openai.yaml")
+    require_contains(metadata, 'display_name: "宋老师的营销诊断 skills"', "agents/openai.yaml")
+    require_contains(metadata, 'short_description: "帮你看清营销方案卡在哪里、下一版怎么改"', "agents/openai.yaml")
+    require_contains(metadata, 'default_prompt: "使用 $songyue-marketingdx 诊断下面这份营销方案。"', "agents/openai.yaml")
+
+
 def check_smoke_cases() -> None:
     smoke_dir = ROOT / "tests" / "smoke_cases"
     if not smoke_dir.is_dir():
@@ -113,6 +120,7 @@ def main() -> int:
     checks = [
         check_skill,
         check_references,
+        check_agents_metadata,
         check_smoke_cases,
         check_fresh_agent_prompts,
         check_readme,

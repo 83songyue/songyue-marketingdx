@@ -1,7 +1,7 @@
 interface:
   display_name: "宋老师的营销诊断 skills"
-  short_description: "面向中文营销方案的类型路由、证据诊断与修改建议"
-  default_prompt: "Use $songyue-marketingdx to diagnose this Chinese marketing plan with evidence-bound feedback."
+  short_description: "帮你看清营销方案卡在哪里、下一版怎么改"
+  default_prompt: "使用 $songyue-marketingdx 诊断下面这份营销方案。"
 
 policy:
   allow_implicit_invocation: true
