@@ -47,3 +47,11 @@ The first command validates the skill metadata. The smoke check confirms the pub
 ## Public Boundary
 
 This repository intentionally excludes real client materials, original customer copy, private gold standards, deep root-cause routing, PR risk rules, production prompts, backend services, caches, and usage data.
+
+## License
+
+This project is licensed under `GPL-3.0-or-later`. You may use, study, modify, and redistribute it, including for commercial purposes, under the GPL terms.
+
+If you distribute a modified version, you must keep the same GPL license, provide the corresponding source, preserve copyright and license notices, and clearly state that you changed it.
+
+The names `宋老师`, `songyue-marketingDx`, `Songyue MarketingDx`, and related personal branding or marks are not licensed as trademarks or endorsement rights. Modified versions must not imply endorsement by the original author.
