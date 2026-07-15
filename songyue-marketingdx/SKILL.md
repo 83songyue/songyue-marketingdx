@@ -1,6 +1,6 @@
 ---
 name: songyue-marketingdx
-description: Chinese marketing plan diagnosis skill for public L1.5 review. Use when the user asks to diagnose, sharpen, critique, revise, compare, or improve a Chinese marketing proposal, campaign plan, brand strategy, PR/communications plan, creative/content plan, or integrated marketing plan using evidence-bound feedback.
+description: Chinese marketing plan diagnosis skill for public L1.5 review. Use when the user asks to diagnose, sharpen, critique, revise, compare, or improve a Chinese marketing proposal, campaign plan, brand strategy, PR/communications plan, creative/content plan, or integrated marketing plan using evidence-bound feedback. Trigger on Chinese requests such as "帮我诊断一下这个营销方案", "诊断方案", "帮我看看这份营销方案", "优化这份传播方案", "看看这个品牌策略", or "帮我改这组创意内容".
 ---
 
 # Songyue MarketingDx

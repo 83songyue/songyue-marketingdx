@@ -1,8 +1,8 @@
 # 宋老师的营销诊断 skills
 
-把一份中文营销方案丢给 AI，让它别只会夸“思路清晰、亮点突出”，而是像一个有经验的品牌策略顾问一样，指出这个方案到底卡在哪里、为什么不够锋利、下一版该怎么改。
+把一份营销方案丢给 AI，让它别只会夸“思路清晰、亮点突出”，而是像一个有经验的品牌策略顾问一样，指出这个方案到底卡在哪里、为什么不够锋利、下一版该怎么改。
 
-`songyue-marketingdx` 是松邀客（宋老师）开放出来的营销方案诊断 Agent Skill。它基于我 20 年品牌营销和创意策略经验沉淀：曾在 Ogilvy、腾讯、天与空等公司工作，长期服务和观察品牌、广告、内容和商业增长项目；同时结合我在真实营销诊断产品中积累的大量方案判断、脱敏案例和诊断框架，整理成一个可以安装到 Codex、Claude Code 等 Agent 环境里的公开 skill。
+`songyue-marketingdx` 是宋玥开放出来的营销方案诊断 Agent Skill。它基于作者 20 年品牌营销和创意策略的实战经验（曾在 Ogilvy、腾讯、天与空等公司工作），长期服务和观察品牌、广告、内容和商业增长项目；同时基于 100+ 4A 级营销案例拆出的判断语料和真实营销诊断产品中积累的诊断框架，整理成一个可以安装到 Codex、Claude Code 等 Agent 环境里的公开 skill。
 
 English summary: `songyue-marketingdx` is a Chinese marketing proposal diagnosis skill based on Songyue's 20 years of brand, creative, and marketing strategy experience. It helps an AI agent critique and improve campaign, PR, brand strategy, and creative/content proposals with practical, evidence-based feedback.
 
@@ -28,26 +28,38 @@ English summary: `songyue-marketingdx` is a Chinese marketing proposal diagnosis
 
 ## 唤醒词 / 使用方式
 
-安装后，在 Codex 或其他支持 Agent Skills 的环境里，直接这样说：
+安装后，最自然的用法就是直接说：
 
 ```text
-Use $songyue-marketingdx to diagnose this marketing plan.
+帮我诊断一下这个营销方案。
 ```
 
-如果你用中文，也可以这样说：
+或者更短一点：
+
+```text
+诊断方案。
+```
+
+也可以说得更具体：
+
+```text
+帮我看这份品牌定位方案，重点判断它的问题定义和品牌主张是否成立。
+```
+
+```text
+帮我诊断这份传播方案，没有 Brief，只有方案正文。
+```
+
+如果你的 Agent 环境没有自动触发 skill，或者你想确保一定调用这个 skill，就显式写：
 
 ```text
 使用 $songyue-marketingdx 诊断下面这份营销方案。
 ```
 
-更具体一点：
+英文环境也可以写：
 
 ```text
-Use $songyue-marketingdx to review this PR launch plan. I have no Brief, only the proposal text.
-```
-
-```text
-使用 $songyue-marketingdx 帮我看这份品牌定位方案，重点判断它的问题定义和品牌主张是否成立。
+Use $songyue-marketingdx to diagnose this marketing plan.
 ```
 
 然后把方案正文贴进去。如果有 Brief，也一起贴；如果没有 Brief，它会只基于方案文本判断，不会脑补预算、渠道资源、品牌历史或业务数据。
@@ -66,32 +78,21 @@ Use $songyue-marketingdx to review this PR launch plan. I have no Brief, only th
 ## 下一步怎么改
 ```
 
-这不是打分器，也不是自动生成“万能优化建议”。它更像一个方案会前的策略审稿人：先判断方案类型，再只看这个类型真正该看的问题。不适合评价的部分，会明确标成 `本方案不评`，避免什么都评、什么都浅。
+这不是打分器，也不是自动生成“万能优化建议”。它更像一个精通营销创意的审稿人：先判断方案类型，再只看这个类型真正该关注的问题。不适合评价的部分，会明确标成 `本方案不评`，避免什么都评、什么都浅。
 
 ## 背后的经验和案例
 
 这个公开 skill 来自三层沉淀：
 
-- **20 年一线经验**：品牌策略、广告创意、内容营销、整合传播、互联网平台和商业咨询。
-- **真实诊断产品经验**：曾经做过线上营销诊断工具，积累过大量方案类型、诊断记录、专家修正和用户反馈。
-- **脱敏复合案例**：公开仓库里的案例不是客户原文，而是把多个真实项目中反复出现的问题抽象、重组、改写后的训练和测试材料。
+- **20 年一线经验**：奥美创意总监 / 腾讯BG事业群市场创意负责人 / 北京天与空创始合伙人
+- **真实营销诊断经验**：服务数十个不同类型的客户，涵盖互联网、快消、新消费、食品饮料等多个领域
+- **脱敏复合案例**：100+ 4A 级营销案例拆出的判断语料，27 个营销判断知识点和 7 类常见问题
 
 为了保护客户和项目隐私，公开版不会放真实客户方案、客户原话、原始广告语、内部路径、精确预算、销售数字、未公开结果或可搜索的独特表达。
 
-## 公开版和线上产品的区别
-
-这个仓库发布的是一个 **Agent Skill**：你把它安装到自己的 Codex、Claude Code 或其他兼容环境里，用你自己的模型额度运行。
-
-它不是原线上诊断产品的后台代码，也不包含线上版本里的账号、额度、支付、缓存、用户数据、私有诊断规则和更深层的专家校准材料。
-
-换句话说：
-
-- 公开版适合个人学习、方案自检、二次开发和 Agent Skill 研究。
-- 线上产品/私有版会包含更多产品能力、案例资产、校准规则和服务系统。
-
 ## 安装
 
-把 `songyue-marketingdx/` 文件夹复制到兼容 Agent Skills 的环境即可。
+这个项目的核心是 `songyue-marketingdx/` 这个 skill 文件夹。只要某个 Agent 环境支持 Agent Skills，原则上就是把整个文件夹导入或复制到它的 skills 目录里。不要只复制 `SKILL.md`，因为还需要 `agents/openai.yaml` 和 `references/`。
 
 本地 Codex 常见安装方式：
 
@@ -100,7 +101,9 @@ mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 cp -R songyue-marketingdx "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-安装后，用 `$songyue-marketingdx` 唤醒。
+Claude Code、Workbody、Hermes 或其他兼容 Agent Skills 的环境，安装逻辑是一样的：导入整个 `songyue-marketingdx/` 文件夹；具体入口、目录名或上传方式以各自工具为准。
+
+安装后，可以用自然语言唤醒；不确定是否触发时，用 `$songyue-marketingdx` 显式唤醒。
 
 ## 仓库结构
 
