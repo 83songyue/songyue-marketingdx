@@ -13,7 +13,14 @@ The skill diagnoses only the material provided by the user and optional Brief. I
 
 ## Install
 
-Copy or install the `songyue-marketingdx/` folder into an Agent Skills-compatible environment.
+Copy the `songyue-marketingdx/` folder into an Agent Skills-compatible environment.
+
+For local Codex skills, one common setup is:
+
+```bash
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
+cp -R songyue-marketingdx "${CODEX_HOME:-$HOME/.codex}/skills/"
+```
 
 ## Use
 
@@ -31,7 +38,12 @@ Run:
 
 ```bash
 python3 path/to/skill-creator/scripts/quick_validate.py songyue-marketingdx
+python3 scripts/smoke_check.py
 python3 scripts/privacy_scan.py
 ```
 
-The first command validates the skill metadata. The second command checks for common private-leak markers before publishing.
+The first command validates the skill metadata. The smoke check confirms the public skill structure, four route cases, and required first-response headings. The privacy scan checks for common private-leak markers before publishing.
+
+## Public Boundary
+
+This repository intentionally excludes real client materials, original customer copy, private gold standards, deep root-cause routing, PR risk rules, production prompts, backend services, caches, and usage data.
