@@ -120,8 +120,10 @@ For a more realistic manual test, use `tests/fresh_agent_prompts.md`. Four revie
 
 ## License
 
-This project is licensed under `GPL-3.0-or-later`.
+This project is licensed under `CC BY-NC-SA 4.0`.
 
-You may use, study, modify, and redistribute it, including for commercial purposes. If you distribute a modified version, you must keep it under the GPL, provide the corresponding source/text, preserve copyright and license notices, and clearly state your changes.
+You may use, study, copy, adapt, and share this project for noncommercial purposes, including installing the complete skill in your own Agent environment. When sharing the original or an adaptation, credit Songyue, retain the copyright and license link, and indicate your changes. Adaptations must use `CC BY-NC-SA 4.0` or a compatible license.
+
+You may not use this project or an adaptation for a product, service, delivery, or online diagnosis tool primarily intended for commercial advantage or monetary compensation. Commercial use requires separate written permission from the author.
 
 The names `宋老师`, `songyue-marketingDx`, `Songyue MarketingDx`, and related personal branding or marks are not licensed as trademarks or endorsement rights. Modified versions must not imply endorsement by the original author or present themselves as an official product by the original author.

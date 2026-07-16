@@ -180,8 +180,10 @@ python3 scripts/privacy_scan.py
 
 ## License
 
-This project is licensed under `GPL-3.0-or-later`.
+This project is licensed under `CC BY-NC-SA 4.0`.
 
-你可以使用、学习、修改和再分发本项目，包括商业使用；但如果你分发修改版，需要继续使用 GPL，提供对应源码/文本，保留版权和许可证声明，并明确说明你做过修改。
+你可以为非商业目的使用、学习、复制、修改和分享本项目，包括把整个 skill 安装到自己的 Agent 环境中使用。分享原版或修改版时，必须署名宋玥、保留版权和许可证链接、说明修改内容；修改版也必须继续使用 `CC BY-NC-SA 4.0` 或兼容协议。
 
-`宋老师`、`songyue-marketingDx`、`Songyue MarketingDx` 及相关个人品牌或标识不随 GPL 授权为商标或背书权。修改版不得暗示由原作者背书，也不得包装成原作者官方产品。
+不得将本项目或其修改版用于以商业利益或金钱报酬为主要目的的产品、服务、交付或在线诊断工具。商业使用需向原作者取得单独书面授权。
+
+`宋老师`、`songyue-marketingDx`、`Songyue MarketingDx` 及相关个人品牌或标识不随本许可证授权为商标或背书权。修改版不得暗示由原作者背书，也不得包装成原作者官方产品。
