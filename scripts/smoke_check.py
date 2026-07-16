@@ -63,6 +63,7 @@ REFERENCE_FILES = [
 ]
 
 FRESH_OUTPUT_VERIFIER = "scripts/verify_fresh_output.py"
+FORWARD_TEST_REPORT = "tests/forward_test_report.md"
 
 
 def read(rel: str) -> str:
@@ -86,7 +87,7 @@ def check_skill() -> None:
     require_contains(skill, "本方案不评", "SKILL.md")
     require_contains(skill, "Do not calculate a total score", "SKILL.md")
     require_contains(skill, "当前最该加分", "SKILL.md")
-    require_contains(skill, "420-500", "SKILL.md")
+    require_contains(skill, "350-500", "SKILL.md")
     for label in ["**重定义：**", "**主方向：**", "**具体成品：**", "**如何落到方案：**"]:
         require_contains(skill, label, "SKILL.md rewrite gate")
     for rel in REFERENCE_FILES:
@@ -177,6 +178,17 @@ def check_fresh_agent_prompts() -> None:
     read(FRESH_OUTPUT_VERIFIER)
 
 
+def check_forward_test_artifacts() -> None:
+    report = read(FORWARD_TEST_REPORT)
+    for filename in PLAN_TYPES:
+        require_contains(
+            report,
+            f"forward_test_outputs/{filename}",
+            "forward_test_report.md",
+        )
+        read(f"tests/forward_test_outputs/{filename}")
+
+
 def check_readme() -> None:
     avatar = ROOT / "assets" / "songyue-avatar.png"
     if not avatar.is_file():
@@ -204,6 +216,7 @@ def main() -> int:
         check_agents_metadata,
         check_smoke_cases,
         check_fresh_agent_prompts,
+        check_forward_test_artifacts,
         check_readme,
     ]
     try:

@@ -116,7 +116,7 @@ python3 scripts/smoke_check.py
 python3 scripts/privacy_scan.py
 ```
 
-For a more realistic manual test, use `tests/fresh_agent_prompts.md`.
+For a more realistic manual test, use `tests/fresh_agent_prompts.md`. Four reviewable isolated-run outputs and a forward-test report are included under `tests/`; they validate these sample contracts, not equivalence across every host model or with the online product.
 
 ## License
 

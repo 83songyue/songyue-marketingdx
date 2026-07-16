@@ -1,6 +1,6 @@
 # Fresh-Agent Acceptance Tests
 
-Run each case in a separate, fresh Agent conversation with only the matching case file and prompt below. This is an output-quality acceptance test, not a file-existence check.
+Run each case in a separate, fresh Agent conversation with only the matching case file and prompt below. This is a structured acceptance test, not proof that every host model will make equally good marketing judgments.
 
 ## Common Acceptance Contract
 
@@ -14,7 +14,7 @@ Accept a response only when all of these are true:
 - `更锋利的一版` gives one direction, is roughly 350-500 Chinese characters, and includes at least one usable strategy/copy/scene/action artifact. It does not split into several competing ideas.
 - `下一步怎么改` has no more than two moves and they serve the same direction.
 
-Treat generic praise, a missing type matrix, an invented fact, a generic rewrite, or a bare channel list as a failure.
+Treat generic praise, a missing type matrix, an invented fact, a generic rewrite, or a bare channel list as a failure. Read the saved output as part of acceptance; the script below checks repeatable structural requirements but cannot grade commercial judgment by itself.
 
 After saving a fresh Agent answer to a local text file, run the deterministic acceptance gate:
 

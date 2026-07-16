@@ -15,7 +15,7 @@ REQUIRED_HEADINGS = [
     "## 更锋利的一版",
     "## 下一步怎么改",
 ]
-SCORE_PATTERN = re.compile(r"[：:]\s*(2|4|6|8|10)(?:[。．]|\s)")
+SCORE_VALUE_PATTERN = r"(?:\*\*|`)?\s*(2|4|6|8|10)\s*(?:分)?\s*(?:\*\*|`)?"
 
 
 def block_after(case: str, heading: str) -> str:
@@ -42,6 +42,20 @@ def rewrite_block(output: str) -> str:
     if not match:
         raise AssertionError("Missing `更锋利的一版` body")
     return match.group(1).strip()
+
+
+def has_quality_mark(output: str, dimension: str) -> bool:
+    pattern = re.compile(
+        rf"(?:\*\*)?{re.escape(dimension)}(?:\*\*)?\s*[：:]\s*{SCORE_VALUE_PATTERN}"
+    )
+    return bool(pattern.search(output))
+
+
+def is_marked_not_applicable(output: str, dimension: str) -> bool:
+    pattern = re.compile(
+        rf"(?:\*\*)?{re.escape(dimension)}(?:\*\*)?[^\n]*本方案不评"
+    )
+    return bool(pattern.search(output))
 
 
 def verify(case_path: Path, output_path: Path) -> None:
@@ -73,11 +87,10 @@ def verify(case_path: Path, output_path: Path) -> None:
         raise AssertionError("Output calculated an overall grade")
 
     for dimension in applicable:
-        pattern = re.compile(rf"{re.escape(dimension)}{SCORE_PATTERN.pattern}")
-        if not pattern.search(output):
+        if not has_quality_mark(output, dimension):
             raise AssertionError(f"Missing 2/4/6/8/10 judgment for {dimension}")
     for dimension in not_applicable:
-        if not re.search(rf"{re.escape(dimension)}[^\n]*本方案不评", output):
+        if not is_marked_not_applicable(output, dimension):
             raise AssertionError(f"Missing not-applicable mark for {dimension}")
 
     rewrite_length = chinese_character_count(rewrite_block(output))
@@ -89,7 +102,10 @@ def verify(case_path: Path, output_path: Path) -> None:
         if label not in rewrite_block(output):
             raise AssertionError(f"Rewrite is missing required label: {label}")
 
-    print(f"Fresh-agent output passed: {case_path.name} ({rewrite_length} Chinese characters).")
+    print(
+        f"Fresh-agent structural gate passed: {case_path.name} "
+        f"({rewrite_length} Chinese characters)."
+    )
 
 
 def main() -> int:

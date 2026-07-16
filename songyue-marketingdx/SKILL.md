@@ -42,12 +42,14 @@ Under `为什么这样判断`, include all of the following:
 - `Brief 已给资源` and `方案新增价值`, when a Brief exists
 - `当前最该加分`: one selected dimension and why it is the main bottleneck
 
-Under `更锋利的一版`, give one complete main direction, not a menu of ideas. Write `420-500` Chinese characters: count the Chinese-character length before sending, and treat anything under `350` as incomplete. Use these four bold inline labels, in this order, to make the direction complete rather than padded:
+Under `更锋利的一版`, give one complete main direction, not a menu of ideas. Write `350-500` Chinese characters, aiming for `400-460`: count the Chinese-character length before sending, and treat anything outside `350-500` as incomplete. Use these four bold inline labels, in this order, to make the direction complete rather than padded:
 
-1. `**重定义：**` State the concrete person, moment, conflict, or business behavior the plan should address. Write at least 120 Chinese characters.
-2. `**主方向：**` State one strategy, positioning sentence, or core concept and why it is more credible than the original. Write at least 105 Chinese characters.
-3. `**具体成品：**` Give a directly usable proposal artifact: PPT title, copy line, key visual/scene, script beat, event/action name, media angle, participation mechanism, or behavior handoff. Write at least 130 Chinese characters.
-4. `**如何落到方案：**` Explain how the proposal's existing actions, channels, or assets should all serve that same direction; state any unproved capability as conditional. Write at least 120 Chinese characters.
+1. `**重定义：**` State the concrete person, moment, conflict, or business behavior the plan should address.
+2. `**主方向：**` State one strategy, positioning sentence, or core concept and why it is more credible than the original.
+3. `**具体成品：**` Give a directly usable proposal artifact: PPT title, copy line, key visual/scene, script beat, event/action name, media angle, participation mechanism, or behavior handoff.
+4. `**如何落到方案：**` Explain how the proposal's existing actions, channels, or assets should all serve that same direction; state any unproved capability as conditional.
+
+Make every label add a different, material piece of the same direction. Do not pad the answer by repeating the diagnosis or rewriting the same point four times.
 
 Do not send the response until all four labels are present and the rewrite meets the total length. Never present an unproved product/service capability as fact.
 

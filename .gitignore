@@ -7,3 +7,8 @@ __pycache__/
 .coverage
 dist/
 build/
+
+# Local project-management files. They are intentionally not part of the public skill.
+AGENTS.md
+PROJECT_BRIEF.md
+STATUS.md

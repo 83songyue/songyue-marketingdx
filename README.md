@@ -136,8 +136,11 @@ Claude Code、Workbody、Hermes 或其他兼容 Agent Skills 的环境，安装�
 │       └── composite-examples.md
 ├── scripts/
 │   ├── privacy_scan.py
-│   └── smoke_check.py
+│   ├── smoke_check.py
+│   └── verify_fresh_output.py
 └── tests/
+    ├── forward_test_outputs/
+    ├── forward_test_report.md
     ├── fresh_agent_prompts.md
     └── smoke_cases/
         ├── integrated-marketing.md
@@ -173,7 +176,7 @@ python3 scripts/privacy_scan.py
 
 三个检查分别用于验证 skill 结构、四类冒烟案例和隐私泄露风险。
 
-如果要做一次更接近真实使用的测试，可以按 `tests/fresh_agent_prompts.md` 里的四组提示词，在新 Agent 会话里分别测试自然语言唤醒和首轮输出结构。
+如果要做一次更接近真实使用的测试，可以按 `tests/fresh_agent_prompts.md` 里的四组提示词，在新 Agent 会话里分别测试自然语言唤醒和首轮输出结构。`tests/forward_test_outputs/` 和 `tests/forward_test_report.md` 保留了四份可审阅的独立测试结果；它们验证这些样本的结构验收，不等同于所有宿主模型都能复现线上产品效果。
 
 ## License
 
