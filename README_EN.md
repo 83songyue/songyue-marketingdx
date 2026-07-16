@@ -10,6 +10,12 @@ Give an AI agent a marketing proposal and ask it to stop giving vague, generic f
 
 [中文说明](README.md)
 
+## Online Diagnosis
+
+To try the marketing diagnosis online or contact Songyue about collaboration, visit [ai.tuyudi.com](https://ai.tuyudi.com).
+
+This GitHub repository provides the installable, learnable public skill. The online version provides the full web experience and a direct contact channel.
+
 ## Can It Work With English Proposals?
 
 Yes. The underlying judgment methods are useful for English-language proposals too: problem definition, audience and scenario, strategic proposition, creative expression, channel/action design, and evidence discipline are not limited to Chinese.

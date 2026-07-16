@@ -14,6 +14,12 @@ English summary: `songyue-marketingdx` is a Chinese marketing proposal diagnosis
 
 这套判断方法也可以用于英文营销方案。它最擅长的仍然是中文方案和中国市场语境；如果要诊断英文方案，可以明确告诉 Agent 用英文输出。
 
+## 线上诊断入口
+
+想直接在线体验营销方案诊断，或联系宋老师咨询合作，请访问 [ai.tuyudi.com](https://ai.tuyudi.com)。
+
+这个 GitHub 仓库提供可安装、可学习的公开 Skill；线上版本则提供完整的在线使用入口和联系渠道。
+
 ## 它能帮你做什么
 
 你可以把下面这些内容发给 AI：
