@@ -4,4 +4,16 @@
 
 Expected route: `传播/公关`
 
-Expected check: `创意表达` may be marked `本方案不评` unless the agent chooses to briefly evaluate the supplied expression.
+Expected applicable dimensions:
+
+- `洞察锐度`
+- `创意记忆`
+- `传播势能`
+- `逻辑通顺`
+
+Expected not applicable:
+
+- `品牌关联`: `本方案不评`
+- `增长有效`: `本方案不评`
+
+Expected primary opportunity: `传播势能`

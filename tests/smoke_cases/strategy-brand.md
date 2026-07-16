@@ -4,4 +4,16 @@
 
 Expected route: `策略/品牌`
 
-Expected check: `创意表达` and `渠道与行动设计` should normally be marked `本方案不评`.
+Expected applicable dimensions:
+
+- `洞察锐度`
+- `品牌关联`
+- `逻辑通顺`
+- `增长有效`
+
+Expected not applicable:
+
+- `创意记忆`: `本方案不评`
+- `传播势能`: `本方案不评`
+
+Expected primary opportunity: `洞察锐度`

@@ -28,13 +28,29 @@ PLAN_TYPES = {
 }
 
 DIMENSIONS = [
-    "商业问题定义",
-    "人群与场景",
-    "战略主张",
-    "创意表达",
-    "渠道与行动设计",
-    "证据与可行性",
+    "洞察锐度",
+    "创意记忆",
+    "品牌关联",
+    "传播势能",
+    "逻辑通顺",
+    "增长有效",
 ]
+
+TYPE_MATRIX = {
+    "整合营销": {"evaluate": DIMENSIONS, "not_applicable": []},
+    "传播/公关": {
+        "evaluate": ["洞察锐度", "创意记忆", "传播势能", "逻辑通顺"],
+        "not_applicable": ["品牌关联", "增长有效"],
+    },
+    "策略/品牌": {
+        "evaluate": ["洞察锐度", "品牌关联", "逻辑通顺", "增长有效"],
+        "not_applicable": ["创意记忆", "传播势能"],
+    },
+    "创意/内容": {
+        "evaluate": ["洞察锐度", "创意记忆", "品牌关联", "逻辑通顺"],
+        "not_applicable": ["传播势能", "增长有效"],
+    },
+}
 
 REFERENCE_FILES = [
     "songyue-marketingdx/references/diagnostic-model.md",
@@ -45,6 +61,8 @@ REFERENCE_FILES = [
     "songyue-marketingdx/references/output-examples.md",
     "songyue-marketingdx/references/composite-examples.md",
 ]
+
+FRESH_OUTPUT_VERIFIER = "scripts/verify_fresh_output.py"
 
 
 def read(rel: str) -> str:
@@ -66,7 +84,11 @@ def check_skill() -> None:
     for heading in REQUIRED_OUTPUT_HEADINGS:
         require_contains(skill, heading, "SKILL.md first-response structure")
     require_contains(skill, "本方案不评", "SKILL.md")
-    require_contains(skill, "do not calculate an overall score", "SKILL.md")
+    require_contains(skill, "Do not calculate a total score", "SKILL.md")
+    require_contains(skill, "当前最该加分", "SKILL.md")
+    require_contains(skill, "420-500", "SKILL.md")
+    for label in ["**重定义：**", "**主方向：**", "**具体成品：**", "**如何落到方案：**"]:
+        require_contains(skill, label, "SKILL.md rewrite gate")
     for rel in REFERENCE_FILES:
         name = Path(rel).name
         require_contains(skill, f"references/{name}", "SKILL.md reference routing")
@@ -82,6 +104,12 @@ def check_references() -> None:
     for dimension in DIMENSIONS:
         require_contains(model, dimension, "diagnostic-model.md")
     require_contains(model, "未提供 Brief，以下判断只基于方案文本", "diagnostic-model.md")
+    for mark in ["`2`", "`4`", "`6`", "`8`", "`10`"]:
+        require_contains(model, mark, "diagnostic-model.md quality marks")
+    for ceiling in ["cannot exceed `6`", "cannot exceed `4`"]:
+        require_contains(model, ceiling, "diagnostic-model.md quality ceilings")
+    require_contains(model, "Brief 已给资源", "diagnostic-model.md")
+    require_contains(model, "do not count as plan capability", "diagnostic-model.md")
 
     examples = read("songyue-marketingdx/references/composite-examples.md")
     require_contains(examples, "not real customer cases", "composite-examples.md")
@@ -128,9 +156,11 @@ def check_smoke_cases() -> None:
     for filename, route in PLAN_TYPES.items():
         text = read(f"tests/smoke_cases/{filename}")
         require_contains(text, f"Expected route: `{route}`", filename)
-        require_contains(text, "Expected check:", filename)
-        if filename != "integrated-marketing.md":
-            require_contains(text, "本方案不评", filename)
+        require_contains(text, "Expected primary opportunity:", filename)
+        for dimension in TYPE_MATRIX[route]["evaluate"]:
+            require_contains(text, f"- `{dimension}`", filename)
+        for dimension in TYPE_MATRIX[route]["not_applicable"]:
+            require_contains(text, f"- `{dimension}`: `本方案不评`", filename)
 
 
 def check_fresh_agent_prompts() -> None:
@@ -142,6 +172,9 @@ def check_fresh_agent_prompts() -> None:
         require_contains(prompts, heading, "fresh_agent_prompts.md")
     require_contains(prompts, "帮我诊断一下这个营销方案", "fresh_agent_prompts.md")
     require_contains(prompts, "诊断方案", "fresh_agent_prompts.md")
+    require_contains(prompts, "350-500", "fresh_agent_prompts.md")
+    require_contains(prompts, "当前最该加分", "fresh_agent_prompts.md")
+    read(FRESH_OUTPUT_VERIFIER)
 
 
 def check_readme() -> None:

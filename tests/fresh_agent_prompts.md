@@ -1,24 +1,25 @@
-# Fresh-Agent Test Prompts
+# Fresh-Agent Acceptance Tests
 
-Use these prompts in a fresh Agent session after installing `songyue-marketingdx/`. The goal is to test whether natural Chinese requests can trigger the skill and whether the first response follows the expected structure.
+Run each case in a separate, fresh Agent conversation with only the matching case file and prompt below. This is an output-quality acceptance test, not a file-existence check.
 
-## How to Run
+## Common Acceptance Contract
 
-For each case:
+Accept a response only when all of these are true:
 
-1. Start a fresh conversation or clear prior case context.
-2. Paste the prompt and the matching file from `tests/smoke_cases/`.
-3. Check the acceptance points below.
+- It has `## 核心判断`, `## 为什么这样判断`, `## 更锋利的一版`, and `## 下一步怎么改`.
+- It identifies the expected proposal type and uses that type's exact default applicable/not-applicable matrix.
+- Every applicable dimension receives an evidence-based `2 / 4 / 6 / 8 / 10` quality judgment. It does not calculate a total or overall grade.
+- It explicitly selects one `当前最该加分` dimension and supports it with plan evidence.
+- It states `未提供 Brief，以下判断只基于方案文本。` and does not invent budget, product capability, media resource, customer endorsement, or external data.
+- `更锋利的一版` gives one direction, is roughly 350-500 Chinese characters, and includes at least one usable strategy/copy/scene/action artifact. It does not split into several competing ideas.
+- `下一步怎么改` has no more than two moves and they serve the same direction.
 
-## Required First-Response Headings
+Treat generic praise, a missing type matrix, an invented fact, a generic rewrite, or a bare channel list as a failure.
 
-Every first response should include:
+After saving a fresh Agent answer to a local text file, run the deterministic acceptance gate:
 
-```markdown
-## 核心判断
-## 为什么这样判断
-## 更锋利的一版
-## 下一步怎么改
+```bash
+python3 scripts/verify_fresh_output.py --case tests/smoke_cases/<case>.md --output /path/to/fresh-agent-answer.txt
 ```
 
 ## Case 1: Integrated Marketing
@@ -31,14 +32,13 @@ Prompt:
 
 Use: `tests/smoke_cases/integrated-marketing.md`
 
-Accept if:
+Accept only if:
 
-- Routes as `整合营销`.
-- Evaluates all six public dimensions or clearly explains any exception.
-- Does not calculate an overall score.
-- States that no Brief was provided and does not invent missing budget, channel resource, brand history, or sales data.
+- It routes as `整合营销` and evaluates all six dimensions.
+- It selects `增长有效` as `当前最该加分` because the business behavior to change is not defined.
+- The rewrite turns the vague “清爽” goal into one conditional, specific target behavior and makes the other actions serve it.
 
-## Case 2: Communications/PR
+## Case 2: Communications / PR
 
 Prompt:
 
@@ -48,14 +48,13 @@ Prompt:
 
 Use: `tests/smoke_cases/pr-communications.md`
 
-Accept if:
+Accept only if:
 
-- Routes as `传播/公关`.
-- Focuses on topic, news value, credibility, evidence, and communication sequence.
-- Marks pure creative execution as `本方案不评` unless it explicitly evaluates the supplied expression.
-- Does not invent media resources or external endorsements.
+- It routes as `传播/公关`; `品牌关联` and `增长有效` are `本方案不评`.
+- It selects `传播势能` as `当前最该加分`, not sales conversion or a generic media expansion.
+- The rewrite creates a reportable/public expression and ties news, interview, and other actions to one proof or event.
 
-## Case 3: Strategy/Brand
+## Case 3: Strategy / Brand
 
 Prompt:
 
@@ -65,13 +64,13 @@ Prompt:
 
 Use: `tests/smoke_cases/strategy-brand.md`
 
-Accept if:
+Accept only if:
 
-- Routes as `策略/品牌`.
-- Focuses on business problem, audience scene, strategic proposition, and evidence.
-- Marks `创意表达` and `渠道与行动设计` as `本方案不评` unless explaining why they are included.
+- It routes as `策略/品牌`; `创意记忆` and `传播势能` are `本方案不评`.
+- It selects `洞察锐度` as `当前最该加分`, not a slogan rewrite alone.
+- The rewrite connects the old asset, a specific household tension, and a credible new role without inventing product or service proof.
 
-## Case 4: Creative/Content
+## Case 4: Creative / Content
 
 Prompt:
 
@@ -81,18 +80,8 @@ Prompt:
 
 Use: `tests/smoke_cases/creative-content.md`
 
-Accept if:
+Accept only if:
 
-- Routes as `创意/内容`.
-- Focuses on audience scene, brand role, proposition-to-idea connection, memorability, and evidence.
-- Marks `商业问题定义` and `渠道与行动设计` as `本方案不评` unless the answer explicitly limits the judgment.
-
-## Failure Signals
-
-Treat these as failures:
-
-- The answer only gives generic praise or generic optimization tips.
-- The answer ignores the four required headings.
-- The answer evaluates every dimension without marking non-core dimensions.
-- The answer invents facts not present in the proposal or Brief.
-- The answer carries facts from a previous case into a new uploaded proposal.
+- It routes as `创意/内容`; `传播势能` and `增长有效` are `本方案不评`.
+- It selects `品牌关联` as `当前最该加分`, rather than criticizing the lack of a media or conversion plan.
+- The rewrite gives a unified creative device and places the brand in the on-screen problem/solution rather than the end card.

@@ -1,124 +1,82 @@
 # Type Playbooks
 
-Use this reference after classifying the proposal. Each type has a different center of gravity. Do not average all dimensions across all proposal types.
+Read this after classifying the proposal. Type controls the default evaluation range. Do not turn every marketing task into a six-part general consulting review.
 
 ## Integrated Marketing (`整合营销`)
 
-Core question: Can the plan connect business problem, audience scene, proposition, creative idea, communication action, and growth path into one coherent system?
+Evaluate: `洞察锐度`、`创意记忆`、`品牌关联`、`传播势能`、`逻辑通顺`、`增长有效`.
 
-Evaluate:
+Core question: Can one human conflict lead through brand role, memorable idea, public action, and a believable behavior/result path?
 
-- Business problem definition
-- Audience and scenario
-- Strategic proposition
-- Creative memory
-- Communication/action design
-- Evidence and growth logic
+Look for:
 
-Strong signals:
+- A specific growth or brand problem that makes the campaign necessary.
+- One central concept that can guide every touchpoint, rather than each platform having its own idea.
+- A main action that gives people or media a reason to notice and repeat it.
+- A path from target person to changed behavior to a business or brand result.
 
-- The campaign has one clear business priority.
-- The creative idea can guide channels instead of being one execution among many.
-- Each touchpoint has a role in the sequence.
-- The plan names what user behavior should change after exposure or participation.
-
-Weak signals:
-
-- The plan is a list of TVC, social posts, KOLs, offline activation, coupons, and reports.
-- Each platform has its own idea.
-- Growth is described only as "exposure", "buzz", "conversion", or "closed loop" without a behavioral bridge.
-
-Revision move: reduce the plan to one problem, one main action, one memory asset, and one next behavior.
+Do not mistake a list of TVC, social posts, KOLs, offline activation, coupons, and reports for an integrated plan. The repair is usually `one conflict -> one brand role -> one memory anchor -> one main action -> one next behavior`, not more channels.
 
 ## Communications / PR (`传播/公关`)
 
-Core question: Is there a public reason for people, media, partners, or communities to care and repeat the story?
+Evaluate: `洞察锐度`、`创意记忆`、`传播势能`、`逻辑通顺`.
 
-Evaluate:
+Mark `品牌关联` and `增长有效` as `本方案不评` unless the Brief explicitly makes them this PR proposal's responsibility.
 
-- Business or reputation problem
-- Audience/stakeholder scene
-- Public topic or news hook
-- Credibility and evidence
-- Communication sequence and participation/reporting reason
+Core question: Does the plan give people, media, industry, partners, or a community a public reason to care and repeat the story now?
 
-Usually mark as `本方案不评`:
+Look for:
 
-- Pure creative craft, unless the submitted material includes topic expression or copy.
-- Direct sales conversion, unless the Brief makes it a PR responsibility.
+- A relationship tension, public issue, or timely contradiction beyond a brand announcement.
+- A topic phrase, event, proof point, or public expression people can summarize.
+- A reportable or participatory reason: evidence, action, spokesperson, response, or debate.
+- A coherent sequence from issue to event/action to communication.
 
-Strong signals:
-
-- The topic has tension, timing, evidence, and a clear spokesperson or action.
-- Media can summarize why this matters now.
-- The plan distinguishes brand claim, proof, and public participation.
-
-Weak signals:
-
-- A press release says the brand "redefines" something without proof.
-- The plan has media names but no story.
-- Public value is declared, but no one has a concrete action to take.
-
-Revision move: turn a brand announcement into a public event, proof point, or participatory action.
+Do not deduct for absent sales conversion, QR code, KPI, or UGC. Do not let a press release plus media list count as communication momentum. A clear public issue and reportable proof may create momentum without a challenge campaign.
 
 ## Strategy / Brand (`策略/品牌`)
 
-Core question: Does the proposal define where the brand should go, why it should go there, and why the brand has the right to occupy that role?
+Evaluate: `洞察锐度`、`品牌关联`、`逻辑通顺`、`增长有效`.
 
-Evaluate:
+Mark `创意记忆` and `传播势能` as `本方案不评` unless the Brief explicitly makes them this strategy proposal's responsibility.
 
-- Business problem definition
-- Audience and scenario
-- Strategic proposition
-- Brand asset translation
-- Evidence and feasibility
+Core question: Does it define where the brand should go, why that move is necessary, and why this brand can credibly occupy that role?
 
-Usually mark as `本方案不评`:
+Look for:
 
-- Creative expression
-- Channel/action design
+- A specific audience conflict or decision moment, not a trend deck alone.
+- A bridge from existing brand/product/service/channel/user relationship assets to the proposed role.
+- A derivation from old problem to new role to future choices.
+- How the position improves brand assets, business choices, customer relationships, or long-term growth; it need not promise a one-off campaign conversion path.
 
-Strong signals:
-
-- The plan explains why the old position is no longer enough.
-- The new role grows from existing brand, product, service, channel, or user assets.
-- It distinguishes trend, competition, audience tension, and brand choice.
-
-Weak signals:
-
-- The proposal jumps from market trend to a broad brand slogan.
-- The new positioning is made of words like "better", "warmer", "younger", "premium", or "lifestyle" without a sharp scene.
-- The plan discards old assets instead of transforming them.
-
-Revision move: define the old asset, the new audience tension, and the bridge that makes the upgrade believable.
+Do not treat broad words such as better, warmer, younger, premium, lifestyle, or comfort as a strategy by themselves. A strong revision names the old asset, the new audience tension, and the believable bridge.
 
 ## Creative / Content (`创意/内容`)
 
-Core question: Does the idea make the proposition easier to remember, retell, and connect back to the brand?
+Evaluate: `洞察锐度`、`创意记忆`、`品牌关联`、`逻辑通顺`.
 
-Evaluate:
+Mark `传播势能` and `增长有效` as `本方案不评` unless the Brief explicitly makes them this creative proposal's responsibility.
 
-- Audience and scenario
-- Strategic proposition
-- Creative memory
-- Brand role
-- Evidence from the submitted idea/script/content
+Core question: Does the work make a real tension easier to remember, retell, and connect back to the brand?
 
-Usually mark as `本方案不评`:
+Look for:
 
-- Business problem definition, unless supplied.
-- Channel/action design, unless supplied.
+- A specific human situation that creates the expression choice.
+- A retellable phrase, behavior, symbol, scene, contrast, or recurring content device.
+- A brand/product/service role inside the story, not an end-card attachment.
+- A visible bridge from tension to concept to individual execution.
 
-Strong signals:
+Do not deduct for absent media plan, KPI, conversion link, or channel calendar. Funny, moving, or stylish scenes are not enough when the brand can be deleted without changing the idea. The repair is normally to make the brand part of why the scene, action, or expression exists.
 
-- The idea has a phrase, behavior, symbol, scene, or contrast people can retell.
-- The brand is necessary to the story or action.
-- The creative choice grows from a specific audience tension.
+## Selecting the Primary Opportunity
 
-Weak signals:
+Choose one bottleneck after judging the applicable dimensions:
 
-- The content is funny, emotional, or stylish, but the brand appears only at the end.
-- The idea dramatizes a general mood without a product or brand role.
-- The scripts are good scenes but not a campaign idea.
+1. If the central premise fails or Brief is unanswered, prioritize `逻辑通顺`.
+2. If a broad trend or emotion makes all later choices vague, prioritize `洞察锐度`.
+3. If the tension is usable but the proposal has no retellable form, prioritize `创意记忆`.
+4. If the work stands without the brand, prioritize `品牌关联`.
+5. If a campaign has material but no reason to spread, join, or report, prioritize `传播势能`.
+6. If the plan cannot explain what behavior changes and why that matters, prioritize `增长有效`.
 
-Revision move: identify the one thing people should remember and make the brand part of why that thing exists.
+When several are weak, still select only one primary direction for the rewrite. Do not make the user solve six unrelated problems at once.

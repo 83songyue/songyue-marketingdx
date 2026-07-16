@@ -4,4 +4,13 @@
 
 Expected route: `整合营销`
 
-Expected check: all six dimensions can be evaluated; no overall score.
+Expected applicable dimensions:
+
+- `洞察锐度`
+- `创意记忆`
+- `品牌关联`
+- `传播势能`
+- `逻辑通顺`
+- `增长有效`
+
+Expected primary opportunity: `增长有效`
