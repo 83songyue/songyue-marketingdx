@@ -117,7 +117,6 @@ The `references/` folder includes the public knowledge layer used by the skill: 
 Before publishing, maintainers can run:
 
 ```bash
-python3 path/to/skill-creator/scripts/quick_validate.py songyue-marketingdx
 python3 scripts/smoke_check.py
 python3 scripts/privacy_scan.py
 ```

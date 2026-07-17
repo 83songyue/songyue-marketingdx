@@ -175,7 +175,6 @@ Claude Code、Workbody、Hermes 或其他兼容 Agent Skills 的环境，安装�
 维护者发布前建议运行：
 
 ```bash
-python3 path/to/skill-creator/scripts/quick_validate.py songyue-marketingdx
 python3 scripts/smoke_check.py
 python3 scripts/privacy_scan.py
 ```
