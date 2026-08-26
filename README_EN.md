@@ -89,12 +89,12 @@ It is not a scoring machine. It is closer to a pre-meeting strategy reviewer: it
 Songyue (宋玥) is a brand marketing and creative strategy practitioner with 20 years of hands-on experience, including roles as:
 
 - Creative Director at Ogilvy
-- Marketing Creative Lead for a Business Group at Tencent
+- Marketing Creative Lead for Tencent's MIG/CSIG Business Groups
 - Founding Partner of Beijing Tianyukong (天与空)
 
-His work spans brand, advertising, content, and business growth projects across internet services, fast-moving consumer goods, emerging consumer brands, and food and beverages.
+His work spans brand, advertising, content, and business growth projects across internet services, fast-moving consumer goods, financial services, emerging consumer brands, and food and beverages.
 
-To learn more or contact Songyue, visit [songyue.me](https://songyue.me).
+To learn more or contact Songyue, visit [songyue.me](https://songyue.me/).
 
 ## Installation
 
