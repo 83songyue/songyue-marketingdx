@@ -12,7 +12,7 @@ Give an AI agent a marketing proposal and ask it to stop giving vague, generic f
 
 ## Online Diagnosis
 
-To try the marketing diagnosis online or contact Songyue about collaboration, visit [ai.tuyudi.com](https://ai.tuyudi.com).
+To try the marketing diagnosis online or contact Songyue about collaboration, visit [songyue.me](https://songyue.me).
 
 This GitHub repository provides the installable, learnable public skill. The online version provides the full web experience and a direct contact channel.
 
@@ -83,6 +83,18 @@ The first diagnosis uses four sections:
 ```
 
 It is not a scoring machine. It is closer to a pre-meeting strategy reviewer: it identifies the proposal type, evaluates the dimensions that matter for that type, and marks irrelevant dimensions as `本方案不评`.
+
+## About the author
+
+Songyue (宋玥) is a brand marketing and creative strategy practitioner with 20 years of hands-on experience, including roles as:
+
+- Creative Director at Ogilvy
+- Marketing Creative Lead for a Business Group at Tencent
+- Founding Partner of Beijing Tianyukong (天与空)
+
+His work spans brand, advertising, content, and business growth projects across internet services, fast-moving consumer goods, emerging consumer brands, and food and beverages.
+
+To learn more or contact Songyue, visit [songyue.me](https://songyue.me).
 
 ## Installation
 
